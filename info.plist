@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>cn.v-hiker</string>
+	<key>connections</key>
+	<dict>
+		<key>CFE2ED4D-5372-4D16-8129-71572488EDDD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F19E049D-199D-46A2-BF02-420CEA254B00</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F19E049D-199D-46A2-BF02-420CEA254B00</key>
+		<array/>
+	</dict>
+	<key>createdby</key>
+	<string>mrooze</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Run CN project</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>cn</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Run CN project.</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>CFE2ED4D-5372-4D16-8129-71572488EDDD</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+	try
+  		do shell script "cd ~/Desktop/Project/thecn.com/docker-testcn/;/usr/local/bin/docker-compose up -d"
+	on error the error_message number the error_number
+		display dialog "Error: " &amp; the error_number &amp; "." &amp; the error_message buttons {"OK"}
+	end try
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>F19E049D-199D-46A2-BF02-420CEA254B00</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>CFE2ED4D-5372-4D16-8129-71572488EDDD</key>
+		<dict>
+			<key>xpos</key>
+			<integer>140</integer>
+			<key>ypos</key>
+			<integer>135</integer>
+		</dict>
+		<key>F19E049D-199D-46A2-BF02-420CEA254B00</key>
+		<dict>
+			<key>xpos</key>
+			<integer>310</integer>
+			<key>ypos</key>
+			<integer>135</integer>
+		</dict>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string>https://v-hiker.cn</string>
+</dict>
+</plist>
