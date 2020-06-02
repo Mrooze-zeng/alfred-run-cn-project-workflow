@@ -1,0 +1,3 @@
+- the default path of the project ```~/Desktop/Project/thecn.com/docker-testcn/```
+- docker-compose installed!
+- click on ```Run CN project.alfredworkflow``` to install this workflow
